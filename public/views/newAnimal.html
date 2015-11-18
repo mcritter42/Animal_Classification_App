@@ -1,0 +1,68 @@
+            <section ng-app="Animal_App" ng-controller="AnimalsController">
+              <form ng-submit="create()" novalidate>
+                <input ng-model="commonName" type="hidden"/>
+                <input ng-model="scientificName" type="hidden"/>
+                <input ng-model="Class" type="hidden"/>
+                <input ng-model="order" type="hidden"/>
+                <input ng-model="family" type="hidden"/>
+                <input ng-model="Char" type="hidden"/>
+                <md-card>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                  <h2 class="md-toolbar-tools">
+                    <span>Create New Animal</span>
+                  </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+                  <md-input-container>
+                    <label>Common Name</label>
+                    <input ng-model="commonName" id="commonName" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Class</label>
+                    <md-select ng-model="Class" id="Class" required>
+                      <md-option value="Mammal">Mammal</md-option>
+                      <md-option value="Reptile">Reptile</md-option>
+                      <md-option value="Bird">Bird</md-option>
+                    </md-select>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Scientific Name</label>
+                    <input ng-model="scientificName" id="scientificName" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Order</label>
+                    <input ng-model="order" id="order" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Family</label>
+                    <input ng-model="family" id="family" required>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Characteristics</label>
+                    <input ng-model="Char" id="Char" required>
+                  </md-input-container>
+                  
+                  
+                  <md-input-container>
+                    <label>Image URL</label>
+                    <input ng-model="Img" id="Img">
+                  </md-input-container>
+                    
+                  </md-content>
+                 <md-button class="md-raised md-primary" type="submit">
+                    Submit
+                  </md-button>
+                  <div ng-bind="error">
+                  <strong ng-bind="error">
+                  </strong>
+                </div>
+                </md-card-content>
+                </md-card>
+              </form>
+          </section>

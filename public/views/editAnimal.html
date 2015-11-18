@@ -1,0 +1,61 @@
+            <section ng-controller="AnimalsController" ng-init="findOne()">
+              <md-card>
+                <form ng-submit="update()" novalidate>
+                <md-toolbar class="md-accent md-whiteframe-1dp">
+                <h2 class="md-toolbar-tools">
+                  <span>Edit Animal</span>
+                </h2>
+                </md-toolbar>
+                <md-card-content layout="column">
+                  <md-content>
+                  <md-input-container>
+                    <label>Common Name</label>
+                    <input ng-model="animal.commonName" type="commonName">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Class</label>
+                    <md-select ng-model="animal.Class" type="Class">
+                      <md-option value="Mammal">Mammal</md-option>
+                      <md-option value="Reptile">Reptile</md-option>
+                      <md-option value="Bird">Bird</md-option>
+                    </md-select>
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Scientific Name</label>
+                    <input ng-model="animal.scientificName">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Order</label>
+                    <input data-ng-model="animal.order">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Family</label>
+                    <input ng-model="animal.family">
+                  </md-input-container>
+                  
+                  <md-input-container>
+                    <label>Characteristics</label>
+                    <input ng-model="animal.Char">
+                  </md-input-container>
+                </md-content>
+                
+                <md-input-container>
+                  <label>Image URL</label>
+                  <input ng-model="animal.Img">
+                </md-input-container>
+                  
+               <md-button class="md-raised md-primary" type="submit" value="Update">
+                  Submit
+                </md-button>
+                <div ng-show="error">
+                  <strong ng-bind="error">
+                  </strong>
+                </div>
+                </md-card-content>
+                </form>
+              </md-card>
+          </section>
