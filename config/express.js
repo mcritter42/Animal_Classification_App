@@ -7,7 +7,9 @@ var config = require('./config'),
     bodyParser = require('body-parser'),
     methodOverride = require('method-override'),
     session = require('express-session'),
-    MongoStore = require('connect-mongo')(session);
+    MongoStore = require('connect-mongo')(session),
+    passport = require('passport'),
+    flash = require('connect-flash');
     
     
 
@@ -43,8 +45,13 @@ module.exports = function(db) {
     app.set('views', './app/views');
     app.set('view engine', 'ejs');
     
+    app.use(flash());
+    app.use(passport.initialize());
+    app.use(passport.session());
+    
     require('../app/routes/index.server.route.js')(app);
     require('../app/routes/animal.server.route.js')(app);
+    require('../app/routes/user.server.route.js')(app);
     
     app.use('/public', express.static('/home/ubuntu/workspace/public'));
     app.use('/node_modules', express.static('/home/ubuntu/workspace/node_modules'));
