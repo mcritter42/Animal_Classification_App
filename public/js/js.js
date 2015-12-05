@@ -3,8 +3,8 @@ var mainApplicationModule = angular.module(mainApplicationModuleName, ['ngResour
 
 mainApplicationModule.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
-    .primaryPalette('deep-purple')
-    .accentPalette('yellow');
+    .primaryPalette('light-blue')
+    .accentPalette('orange');
 });
 
 mainApplicationModule.config(['$locationProvider', function($locationProvider) {

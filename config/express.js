@@ -15,8 +15,6 @@ var config = require('./config'),
 
 module.exports = function(db) {
     var app = express();
-    var server = http.createServer(app);
-    var io = socketio.listen(server);
     
     if (process.env.NODE_ENV === 'development') {
         app.use(morgan('dev'));
@@ -57,7 +55,6 @@ module.exports = function(db) {
     app.use('/node_modules', express.static('/home/ubuntu/workspace/node_modules'));
     app.use('bower_components', express.static('/home/ubuntu/workspace/bower_components'));
     
-    require('./socketio')(server, io, mongoStore);
     
-    return server;
+    return app;
 };

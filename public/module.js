@@ -1,1 +1,1 @@
-angular.module('animals', ['ngResource', 'ngRoute', 'ngFileUpload']);
+angular.module('animals', ['ngResource', 'ngRoute']);

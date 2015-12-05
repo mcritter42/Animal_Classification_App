@@ -2,32 +2,25 @@ var mongoose = require("mongoose"), Schema = mongoose.Schema;
 
 var AnimalSchema =  new Schema({
     commonName: {
-        type: String,
-        required: 'Must input a Commom Name'
+        type: String
     },
     scientificName: {
-        type: String,
-        required: 'Must input a Scientific Name'
+        type: String
     },
     Class: {
-        type: String,
-        required: 'Must input a Class'
+        type: String
     },
     order: {
-        type: String,
-        required: 'Must input an Order'
+        type: String
     },
     family: {
-        type: String,
-        required: 'Must input a Family'
+        type: String
     },
     Char: {
-        type: String,
-        required: 'Must input some Characteristics'
+        type: String
     },
     Img: {
-        type: String,
-        required: 'Must input an img'
+        type: String
     }
 });
 
